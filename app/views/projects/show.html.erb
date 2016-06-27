@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  	<div class="show-form">
+		<h2><label><%= @project.title %></label></h2>
+		<label><%= @project.created_at.strftime('%A, %B, %d')%></label>
+		<h5><label><%= @project.description %></label></h5>
+		<label><%= @project.link%></label><br>
+
+		<%= link_to "Back", projects_path, :class => "btn btn-primary" %>
+		<%= link_to 'Edit', edit_project_path(@project), :class => "btn btn-warning"%>
+		<%= link_to 'Delete', project_path(@project),method: :delete,:class => "btn btn-danger"%></td> 
+	</div>
+	</div>
+</div>

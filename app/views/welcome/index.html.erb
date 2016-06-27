@@ -1,0 +1,66 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+
+
+<div class="col-posts">
+	<h3>Latest Blog Posts</h3>
+	
+	<table class="table">
+			<tr>
+			    <th>Title</th>
+			    <th>Content</th>
+			     <th>Created</th>
+			</tr>
+			<%  @posts.each do |p| %>
+			 <tr>
+			  	<td><%= link_to p.title, post_path(p) %> </td>
+			    <td><%= p.content.first(25) %>...</td> 
+			    <td><%= p.created_at.strftime('%A, %B, %d') %></td> 
+			 </tr>
+		   	<% end %>
+		</table>
+		
+	<nav>
+  <ul class="pager">
+    <li class="previous "><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+    <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+  </ul>
+</nav>
+</div>
+
+<div class="col-projects">
+	<h3>Projects</h3>
+	<hr class="speacial-hr">
+	<h4>First Project</h4>
+	Friday April 10
+	<br>
+
+	<h4>Secon Project</h4>
+	Friday April 10
+	<br>
+
+	<h4>Third Project</h4>
+	Friday April 10
+	<br>
+</div>
+<div class="col-about">
+	<h3>About</h3>
+	<hr class="speacial-hr">
+	<div class="col-about-img">
+	<%= image_tag("photo.jpg") %>
+	</div>
+	<div class="col-about-text">
+	<p>I am software developer &amp; designer living in Plovdiv, Bulgaria. </p>
+	<p>By day I work as developer on rails applications by night i learn how to code on ruby :D</p>
+	<p>You can find me ot Twitter,sharing some code on Github and sharing some jokes on Facebook</p>
+	</div>
+</div>
+<footer>
+<hr>
+
+	<a href=""><label>Facebook</label></a>
+	<a href=""><label>Twitter</label></a>
+	<a href=""><label>GitHub</label></a>
+</footer>
+</div>
+</div>
